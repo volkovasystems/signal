@@ -20,22 +20,14 @@ define( "signal",
 			id 
 		*/
 		function Signal = function Signal( id, parent, module ){
-
+			this.id = id;
+			if( module ){
+				this.integrateModule( module );
+			}
+			if( parent ){
+				this.bootstrap( parent );
+			}
 		};
-
-		Signal.prototype.bootstrap = function bootstrap( parent ){
-
-		};
-
-		Signal.prototype.integrate = function integrate( module ){
-
-		};
-
-		Signal.prototype.build = function build( ){
-
-		};
-
-		return Signal;
 	} );
 
 
